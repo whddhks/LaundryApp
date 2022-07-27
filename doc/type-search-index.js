@@ -1,0 +1,1 @@
+typeSearchIndex = [{"l":"All Classes","url":"allclasses-index.html"},{"p":"laundryroom","l":"Cloth"},{"p":"laundryroom","l":"LaundryStore"},{"p":"laundryroom","l":"SameIdException"},{"p":"laundryroom","l":"User"},{"p":"laundryroom","l":"UserInterface"},{"p":"laundryroom","l":"UserRegister"}]
