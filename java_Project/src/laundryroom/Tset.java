@@ -14,7 +14,7 @@ public class Tset extends JFrame{
 	JLabel lb,lb2;
 	
 	JButton b1,b2,b3,b4,b5,b6;
-	Icon icon1;
+	ImageIcon door, home, key, my, laundry;
 	
 	static JPanel pN2=new JPanel() {
 		Image background=new ImageIcon("cloth.jpeg").getImage();
@@ -53,11 +53,34 @@ public class Tset extends JFrame{
 		pN2.setLayout(null);
 		pN2.setBounds(0,0,450,200); // 위치 크기순
 		p.add(pN2);
-		b1=new JButton("로그인");
-		b2=new JButton("회원가입");
-		b3=new JButton("세탁물 등록");
-		b4=new JButton("마이 페이지");
-		b6=new JButton("홈");
+		key=new ImageIcon("열쇠.PNG");
+		Image keyimage=key.getImage();
+		Image changekeyimage=keyimage.getScaledInstance(85, 70, Image.SCALE_SMOOTH);
+		ImageIcon changekey=new ImageIcon(changekeyimage);
+		home=new ImageIcon("집.PNG");
+		Image homeimage=home.getImage();
+		Image changehomeimage=homeimage.getScaledInstance(85, 70, Image.SCALE_SMOOTH);
+		ImageIcon changehome=new ImageIcon(changehomeimage);
+		door=new ImageIcon("문.PNG");
+		Image doorimage=door.getImage();
+		Image changedoorimage=doorimage.getScaledInstance(85, 70, Image.SCALE_SMOOTH);
+		ImageIcon changedoor=new ImageIcon(changedoorimage);
+		my=new ImageIcon("전체.PNG");
+		Image myimage=my.getImage();
+		Image changemyimage=myimage.getScaledInstance(85, 70, Image.SCALE_SMOOTH);
+		ImageIcon changemy=new ImageIcon(changemyimage);
+		laundry=new ImageIcon("세탁물.PNG");
+		Image laundryimage=laundry.getImage();
+		Image changelaundryimage=laundryimage.getScaledInstance(85, 70, Image.SCALE_SMOOTH);
+		ImageIcon changelaundry=new ImageIcon(changelaundryimage);
+		
+		
+		
+		b1=new JButton(changekey);
+		b2=new JButton(changedoor);
+		b3=new JButton(changelaundry);
+		b4=new JButton(changemy);
+		b6=new JButton(changehome);
 		
 		pN.add(b1);
 		//b1.setPreferredSize(new Dimension(80,50)); 자바버튼 크기 조절
