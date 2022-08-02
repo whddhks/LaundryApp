@@ -4,13 +4,14 @@ import java.util.*;
 import java.awt.*;
 import java.awt.event.*;
 public class Tset extends JFrame{
+	UserRegister ur=new UserRegister();
 	JPanel p=new JPanel();
 	JPanel pN=new JPanel();
 	JPanel pN3=new JPanel();
 	
 	JTextArea ta=new JTextArea();
 	JTextField tfID=new JTextField();
-	JTextField tfPassword=new JTextField();
+	JPasswordField tfPassword=new JPasswordField();
 	JLabel lb,lb2;
 	
 	JButton b1,b2,b3,b4,b5,b6;
@@ -39,9 +40,12 @@ public class Tset extends JFrame{
 		lb=new JLabel("아 이 디");
 		lb.setBounds(50, 50, 50,20);
 		tfID.setBounds(170,50,180,20);
+		tfID.selectAll();
 		lb2=new JLabel("비 밀 번 호");
 		lb2.setBounds(50, 130, 60, 20);
 		tfPassword.setBounds(170, 130, 180, 20);
+		tfPassword.selectAll();
+		tfPassword.setEchoChar('*');
 		b5= new JButton("로   그   인");
 		b5.setBounds(150,210,120,20);
 		pN3.add(lb);
@@ -88,10 +92,27 @@ public class Tset extends JFrame{
 		pN.add(b6);
 		pN.add(b3);
 		pN.add(b4);
+		MyEventHandler handler =new MyEventHandler();
+		b5.addActionListener(handler);
+		tfID.addActionListener(handler);
+		tfPassword.addActionListener(handler);
 		//b5=new JButton("");
 		this.setSize(450,600);
 		this.setVisible(true);
 		this.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
+	}
+	class MyEventHandler implements ActionListener {
+		public void actionPerformed(ActionEvent e) {
+			Object obj=e.getSource();
+			if (obj==b5 || obj==tfID ||obj==tfPassword) {
+				String id=tfID.getText();
+				id=id.trim();
+				String pwd=tfPassword.getText();
+				pwd=pwd.trim();
+				ur.Join();
+				
+			}
+		}
 	}
 
 	public static void main(String[] args) {
