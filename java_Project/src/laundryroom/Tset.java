@@ -16,7 +16,7 @@ public class Tset extends JFrame{
 	
 	JButton b1,b2,b3,b4,b5,b6;
 	ImageIcon door, home, key, my, laundry;
-	
+	ImageIcon redoor,rehome,rekey,remy,relaundry;
 	static JPanel pN2=new JPanel() {
 		Image background=new ImageIcon("cloth.jpeg").getImage();
 		public void paint(Graphics g) {
@@ -78,6 +78,27 @@ public class Tset extends JFrame{
 		Image changelaundryimage=laundryimage.getScaledInstance(85, 70, Image.SCALE_SMOOTH);
 		ImageIcon changelaundry=new ImageIcon(changelaundryimage);
 		
+		rehome=new ImageIcon("집반전.PNG");
+		Image rehomeimage=rehome.getImage();
+		Image changerehomeimage=rehomeimage.getScaledInstance(85, 70, Image.SCALE_SMOOTH);
+		ImageIcon changerehome=new ImageIcon(changerehomeimage);
+		redoor=new ImageIcon("문 반전.PNG");
+		Image redoorimage=redoor.getImage();
+		Image changeredoorimage=redoorimage.getScaledInstance(85, 70, Image.SCALE_SMOOTH);
+		ImageIcon changeredoor=new ImageIcon(changeredoorimage);
+		remy=new ImageIcon("전체 반전.PNG");
+		Image remyimage=remy.getImage();
+		Image changeremyimage=remyimage.getScaledInstance(85, 70, Image.SCALE_SMOOTH);
+		ImageIcon changeremy=new ImageIcon(changeremyimage);
+		relaundry=new ImageIcon("세탁물 반전.PNG");
+		Image relaundryimage=relaundry.getImage();
+		Image changerelaundryimage=relaundryimage.getScaledInstance(85, 70, Image.SCALE_SMOOTH);
+		ImageIcon changerelaundry=new ImageIcon(changerelaundryimage);
+		rekey=new ImageIcon("열쇠 반전.PNG");
+		Image rekeyimage=rekey.getImage();
+		Image changerekeyimage=rekeyimage.getScaledInstance(85, 70, Image.SCALE_SMOOTH);
+		ImageIcon changerekey=new ImageIcon(changerekeyimage);
+		
 		
 		
 		b1=new JButton(changekey);
@@ -85,6 +106,12 @@ public class Tset extends JFrame{
 		b3=new JButton(changelaundry);
 		b4=new JButton(changemy);
 		b6=new JButton(changehome);
+		
+		b1.setPressedIcon(changerekey);
+		b2.setPressedIcon(changeredoor);
+		b3.setPressedIcon(changerelaundry);
+		b4.setPressedIcon(changeremy);
+		b6.setPressedIcon(changerehome);
 		
 		pN.add(b1);
 		//b1.setPreferredSize(new Dimension(80,50)); 자바버튼 크기 조절
@@ -96,10 +123,21 @@ public class Tset extends JFrame{
 		b5.addActionListener(handler);
 		tfID.addActionListener(handler);
 		tfPassword.addActionListener(handler);
+		b2.addActionListener(handler);
 		//b5=new JButton("");
 		this.setSize(450,600);
 		this.setVisible(true);
 		this.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
+	}
+	
+	class ChangePage implements ActionListener{
+		public void actionPerformed(ActionEvent e){
+			Object obj=e.getSource();
+			if (obj==b2) {
+				
+			}
+			
+		}
 	}
 	class MyEventHandler implements ActionListener {
 		public void actionPerformed(ActionEvent e) {
@@ -109,6 +147,7 @@ public class Tset extends JFrame{
 				id=id.trim();
 				String pwd=tfPassword.getText();
 				pwd=pwd.trim();
+				
 				ur.Join();
 				
 			}
