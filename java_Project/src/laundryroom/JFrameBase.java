@@ -17,6 +17,8 @@ public class JFrameBase extends JFrame implements JFrameInterface{
 	
 	JButton b1,b2,b3,b4,b5,b6;
 	public void AccountFrame() {
+		add(p);
+		p.setLayout(null);
 		
 	}
 	static JPanel pN2=new JPanel() {
