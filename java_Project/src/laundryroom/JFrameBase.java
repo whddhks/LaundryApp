@@ -28,6 +28,7 @@ public class JFrameBase extends JFrame implements JFrameInterface{
 		}
 	};
 	public void joinFrame() {
+		add(p);
 		p.setLayout(null);
 		p.setBackground(Color.white);
 		pN3.setLayout(null);
@@ -53,6 +54,7 @@ public class JFrameBase extends JFrame implements JFrameInterface{
 		pN2.setLayout(null);
 		pN2.setBounds(0,0,450,200); // 위치 크기순
 		p.add(pN2);
+		
 	}
 	
 	public void LaundryFrame() {

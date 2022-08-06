@@ -8,6 +8,7 @@ public class LaundryAppGui extends JFrame {
 	JPanel p=new JPanel();
 	JPanel pN=new JPanel();
 	JPanel pN3=new JPanel();
+	JFrameBase jfb=new JFrameBase();
 	
 	JButton b1,b2,b3,b4,b5,b6;
 	ImageIcon door, home, key, my, laundry;
@@ -15,13 +16,13 @@ public class LaundryAppGui extends JFrame {
 	public LaundryAppGui() {
 		// 배열로 가능한가? 배열로 하면 반복코드 수가 줄거같다.
 		//ImageIcon arric[]=new ImageIcon[10];
-		
 		add(p);
 		p.setLayout(null);
 		p.setBackground(Color.white);
 		pN.setLayout(new GridLayout());
 		pN.setBounds(0,490, 435, 70);
 		p.add(pN);
+		
 		key=new ImageIcon("열쇠.PNG");
 		Image keyimage=key.getImage();
 		Image changekeyimage=keyimage.getScaledInstance(85, 70, Image.SCALE_SMOOTH);
@@ -80,18 +81,26 @@ public class LaundryAppGui extends JFrame {
 		pN.add(b6);
 		pN.add(b3);
 		pN.add(b4);
+		
+		b1.addActionListener(new ActionListener(){
+			
+			@Override
+			public void actionPerformed(ActionEvent e) {
+				jfb.joinFrame();
+				p.add();
+			}
+		});
+		
+		this.setSize(450,600);
+		this.setVisible(true);
+		this.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);	
 	}
+	
+	
 	public static void main(String[] args) {
+		new LaundryAppGui();
 		
 		
-		
-		
-		
-		LaundryAppGui ldag=new LaundryAppGui();
-		ldag.setSize(450,600);
-		ldag.setVisible(true);
-		ldag.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
-
 	}
 
 }

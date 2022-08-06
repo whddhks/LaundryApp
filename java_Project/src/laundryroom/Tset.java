@@ -153,14 +153,8 @@ public class Tset extends JFrame{
 	}
 
 	public static void main(String[] args) {
-		//new Tset();
-		JFrameBase jfb=new JFrameBase();
-		jfb.AccountFrame();
+		new Tset();
 		
-		//Tset t=new Tset();
-		jfb.setSize(450,600);
-		jfb.setVisible(true);
-		jfb.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
 	}
 
 }
