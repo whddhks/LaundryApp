@@ -82,12 +82,13 @@ public class LaundryAppGui extends JFrame {
 		pN.add(b3);
 		pN.add(b4);
 		
+		
+		jfb.setVisible(false);
+		
 		b1.addActionListener(new ActionListener(){
-			
 			@Override
 			public void actionPerformed(ActionEvent e) {
-				jfb.joinFrame();
-				p.add();
+				jfb.setVisible(true);
 			}
 		});
 		
@@ -99,6 +100,7 @@ public class LaundryAppGui extends JFrame {
 	
 	public static void main(String[] args) {
 		new LaundryAppGui();
+		
 		
 		
 	}
