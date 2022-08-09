@@ -18,7 +18,7 @@ public class JFrameBase extends JFrame implements JFrameInterface{
 	JTextField tfeaddr=new JTextField();
 	JPasswordField tfPassword=new JPasswordField();
 	JLabel lb,lb2,lb3,lb4,lb5,lb6,lb7;
-	
+	JButton sdb,dcb,bdb;
 	JButton b1,b2,b3,b4,b5,b6;
 	public void AccountFrame() {
 		add(p);
@@ -70,6 +70,7 @@ public class JFrameBase extends JFrame implements JFrameInterface{
 		for(int i=0;i<arr.length;i++) {
 			pN3.add(arr[i]);
 		}
+		
 		JTextField[] arr2= {tfID,tfPassword,tfname,tfaddr,
 				tfphone,tfemail,tfeaddr};
 		for(int i=0;i<arr2.length;i++) {
@@ -86,6 +87,7 @@ public class JFrameBase extends JFrame implements JFrameInterface{
 			g.drawImage(background, 0, 0, null);
 		}
 	};
+	
 	public void joinFrame() {
 		add(p);
 		p.setLayout(null);
