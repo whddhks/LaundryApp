@@ -30,22 +30,18 @@ public class Test2 extends JFrame{
 		pN.setBackground(Color.orange);
 		pN.setBounds(0, 0, 435, 495);
 		p.add(pN);
-		lb=new JLabel("회원정보수정");
+		lb=new JLabel("빨래 방에 오신것을");
+		lb2=new JLabel("환영합니다.!!");
+		
+		
 		lb.setFont(lb.getFont().deriveFont(30f));
-		lb.setBounds(135,30,420,50);
-		update=new JButton("회원정보 수정");
-		update.setBounds(50, 100, 340, 70);
-		delete=new JButton("회원정보 삭제");
-		delete.setBounds(50, 200, 340, 70);
-		cancel=new JButton("세탁물 취소");
-		cancel.setBounds(50, 300, 340, 70);
-		info=new JButton("세탁물 정보");
-		info.setBounds(50, 400, 340, 70);
+		lb2.setFont(lb2.getFont().deriveFont(30f));
+		
+		lb.setBounds(90,30,420,50);
+		lb2.setBounds(130,80,420,50);
 		pN.add(lb);
-		pN.add(update);
-		pN.add(delete);
-		pN.add(cancel);
-		pN.add(info);
+		pN.add(lb2);
+	
 		
 		this.setSize(450,600);
 		this.setVisible(true);

@@ -300,7 +300,26 @@ public class JFrameBase extends JFrame implements JFrameInterface{
 		
 	}
 	public void HomeFrame() {
+		add(p);
+		p.setLayout(null);
+		p.add(pN);
+		pN.setLayout(null);
+		pN.setBackground(Color.orange);
+		pN.setBounds(0, 0, 435, 495);
+		p.add(pN);
+		lb=new JLabel("빨래 방에 오신것을");
+		lb2=new JLabel("환영합니다.!!");
 		
+		
+		lb.setFont(lb.getFont().deriveFont(30f));
+		lb2.setFont(lb2.getFont().deriveFont(30f));
+		
+		lb.setBounds(90,30,420,50);
+		lb2.setBounds(130,80,420,50);
+		pN.add(lb);
+		pN.add(lb2);
+	
 	}
+	
 	
 }
