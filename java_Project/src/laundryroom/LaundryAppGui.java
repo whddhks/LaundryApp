@@ -8,11 +8,12 @@ public class LaundryAppGui extends JFrame {
 	JPanel p=new JPanel();
 	JPanel pN=new JPanel();
 	JPanel pN3=new JPanel();
-	JFrameBase jfb=new JFrameBase();
+	
 	
 	JButton b1,b2,b3,b4,b5,b6;
 	ImageIcon door, home, key, my, laundry;
 	ImageIcon redoor,rehome,rekey,remy,relaundry;
+	/*
 	public LaundryAppGui() {
 		// 배열로 가능한가? 배열로 하면 반복코드 수가 줄거같다.
 		//ImageIcon arric[]=new ImageIcon[10];
@@ -92,14 +93,14 @@ public class LaundryAppGui extends JFrame {
 			}
 		});
 		
-		this.setSize(450,600);
-		this.setVisible(true);
-		this.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);	
+		
 	}
 	
-	
+	*/
 	public static void main(String[] args) {
-		new LaundryAppGui();
+		//new LaundryAppGui();
+		JFrameBase jfb=new JFrameBase();
+		jfb.MainFrame();
 		
 		
 		
