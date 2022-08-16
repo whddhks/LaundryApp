@@ -302,14 +302,19 @@ public class JFrameBase extends JFrame implements JFrameInterface{
 		pN.add(info);
 		
 	}
-	public void HomeFrame() {
+	
+	public void MainFrame() {
 		add(p);
 		p.setLayout(null);
+		p.setBackground(Color.white);
+		pN.setLayout(new GridLayout());
+		pN.setBounds(0,490, 435, 70);
 		p.add(pN);
-		pN.setLayout(null);
-		pN.setBackground(Color.orange);
-		pN.setBounds(0, 0, 435, 495);
-		p.add(pN);
+		
+		pN3.setLayout(null);
+		pN3.setBackground(Color.orange);
+		pN3.setBounds(0, 0, 435, 495);
+		p.add(pN3);
 		lb=new JLabel("빨래 방에 오신것을");
 		lb2=new JLabel("환영합니다.!!");
 		
@@ -319,17 +324,8 @@ public class JFrameBase extends JFrame implements JFrameInterface{
 		
 		lb.setBounds(90,30,420,50);
 		lb2.setBounds(130,80,420,50);
-		pN.add(lb);
-		pN.add(lb2);
-	
-	}
-	public void MainFrame() {
-		add(p);
-		p.setLayout(null);
-		p.setBackground(Color.white);
-		pN.setLayout(new GridLayout());
-		pN.setBounds(0,490, 435, 70);
-		p.add(pN);
+		pN3.add(lb);
+		pN3.add(lb2);
 		
 		key=new ImageIcon("열쇠.PNG");
 		Image keyimage=key.getImage();

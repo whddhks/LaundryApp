@@ -5,5 +5,4 @@ public interface JFrameInterface {
 	abstract void joinFrame();
 	abstract void LaundryFrame();
 	abstract void MypageFrame();
-	abstract void HomeFrame();
 }
