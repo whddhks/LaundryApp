@@ -23,6 +23,7 @@ public class JFrameBase extends JFrame implements JFrameInterface{
 	JButton sdb,dcb,bdb;
 	JButton update,delete, cancel, info ;
 	JButton b1,b2,b3,b4,b5,b6;
+
 	public void AccountFrame() {
 		add(p);
 		p.setLayout(null);
@@ -91,7 +92,9 @@ public class JFrameBase extends JFrame implements JFrameInterface{
 		}
 	};
 	
+
 	public void joinFrame() {
+		this.win=win;
 		add(p);
 		p.setLayout(null);
 		p.setBackground(Color.white);
@@ -118,7 +121,7 @@ public class JFrameBase extends JFrame implements JFrameInterface{
 		pN2.setLayout(null);
 		pN2.setBounds(0,0,450,200); // 위치 크기순
 		p.add(pN2);
-		//this.setVisible(true);
+		p.change
 		
 	}
 	
@@ -392,7 +395,8 @@ public class JFrameBase extends JFrame implements JFrameInterface{
 		b1.addActionListener(new ActionListener(){
 			@Override
 			public void actionPerformed(ActionEvent e) {
-				
+				pN3.setVisible(false);
+				jfb.joinFrame();
 			}
 		});
 		
