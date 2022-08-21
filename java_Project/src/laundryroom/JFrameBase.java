@@ -3,28 +3,66 @@ import javax.swing.*;
 import java.awt.*;
 import java.awt.event.*;
 import java.util.*;
-public class JFrameBase extends JFrame implements JFrameInterface{
+public class JFrameBase extends JFrame{
 	UserRegister ur=new UserRegister();
 	JPanel p=new JPanel();
 	JPanel pN=new JPanel();
 	JPanel pN3=new JPanel();
-	
-	JTextArea ta=new JTextArea();
-	JTextField tfID=new JTextField();
-	JTextField tfname=new JTextField();
-	JTextField tfaddr=new JTextField();
-	JTextField tfphone=new JTextField();
-	JTextField tfemail=new JTextField();
-	JTextField tfeaddr=new JTextField();
-	ImageIcon door, home, key, my, laundry;
-	ImageIcon redoor,rehome,rekey,remy,relaundry;
-	JPasswordField tfPassword=new JPasswordField();
 	JLabel lb,lb2,lb3,lb4,lb5,lb6,lb7;
-	JButton sdb,dcb,bdb;
-	JButton update,delete, cancel, info ;
 	JButton b1,b2,b3,b4,b5,b6;
 
+	static JPanel pN2=new JPanel() {
+		Image background=new ImageIcon("cloth.jpeg").getImage();
+		public void paint(Graphics g) {
+			g.drawImage(background, 0, 0, null);
+		}
+	};
+	static JPanel joinFm=new JPanel() { 
+		public void joinFrame() {
+			JTextField tfID=new JTextField();
+			JPasswordField tfPassword=new JPasswordField();
+			JPanel loginFm=new JPanel();
+			JLabel lb,lb2;
+			JButton btn=new JButton();
+			//add(joinFm);
+			joinFm.setLayout(null);
+			joinFm.setBackground(Color.white);
+			loginFm.setLayout(null);
+			loginFm.setBackground(Color.cyan);
+			loginFm.setBounds(0, 200, 435, 295);
+			joinFm.add(loginFm);
+			lb=new JLabel("아 이 디");
+			lb.setBounds(50, 50, 50,20);
+			tfID.setBounds(170,50,180,20);
+			tfID.selectAll();
+			lb2=new JLabel("비 밀 번 호");
+			lb2.setBounds(50, 130, 60, 20);
+			tfPassword.setBounds(170, 130, 180, 20);
+			tfPassword.selectAll();
+			tfPassword.setEchoChar('*');
+			btn= new JButton("로   그   인");
+			btn.setBounds(150,210,120,20);
+			loginFm.add(lb);
+			loginFm.add(lb2);
+			loginFm.add(tfID);
+			loginFm.add(tfPassword);
+			loginFm.add(btn);
+			pN2.setLayout(null);
+			pN2.setBounds(0,0,450,200); // 위치 크기순
+			loginFm.add(pN2);
+		}
+	};
+//	class joinFrame extends JFrame{
+//	}
 	public void AccountFrame() {
+		JTextArea ta=new JTextArea();
+		JTextField tfID=new JTextField();
+		JTextField tfname=new JTextField();
+		JTextField tfaddr=new JTextField();
+		JTextField tfphone=new JTextField();
+		JTextField tfemail=new JTextField();
+		JTextField tfeaddr=new JTextField();
+		JPasswordField tfPassword=new JPasswordField();
 		add(p);
 		p.setLayout(null);
 		p.setBackground(Color.white);
@@ -85,47 +123,13 @@ public class JFrameBase extends JFrame implements JFrameInterface{
 		pN3.add(b5);
 		
 	}
-	static JPanel pN2=new JPanel() {
-		Image background=new ImageIcon("cloth.jpeg").getImage();
-		public void paint(Graphics g) {
-			g.drawImage(background, 0, 0, null);
-		}
-	};
+	
 	
 
-	public void joinFrame() {
-		this.win=win;
-		add(p);
-		p.setLayout(null);
-		p.setBackground(Color.white);
-		pN3.setLayout(null);
-		pN3.setBackground(Color.cyan);
-		pN3.setBounds(0, 200, 435, 295);
-		p.add(pN3);
-		lb=new JLabel("아 이 디");
-		lb.setBounds(50, 50, 50,20);
-		tfID.setBounds(170,50,180,20);
-		tfID.selectAll();
-		lb2=new JLabel("비 밀 번 호");
-		lb2.setBounds(50, 130, 60, 20);
-		tfPassword.setBounds(170, 130, 180, 20);
-		tfPassword.selectAll();
-		tfPassword.setEchoChar('*');
-		b5= new JButton("로   그   인");
-		b5.setBounds(150,210,120,20);
-		pN3.add(lb);
-		pN3.add(lb2);
-		pN3.add(tfID);
-		pN3.add(tfPassword);
-		pN3.add(b5);
-		pN2.setLayout(null);
-		pN2.setBounds(0,0,450,200); // 위치 크기순
-		p.add(pN2);
-		p.change
-		
-	}
+	
 	
 	public void LaundryFrame() {
+		JButton sdb,dcb,bdb;
 		add(p);
 		p.setLayout(null);
 		p.setBackground(Color.white);
@@ -280,6 +284,7 @@ public class JFrameBase extends JFrame implements JFrameInterface{
 
 	}
 	public void MypageFrame() {
+		JButton update,delete, cancel, info ;
 		add(p);
 		p.setLayout(null);
 		p.add(pN);
@@ -307,6 +312,8 @@ public class JFrameBase extends JFrame implements JFrameInterface{
 	}
 	
 	public void MainFrame() {
+		ImageIcon door, home, key, my, laundry;
+		ImageIcon redoor,rehome,rekey,remy,relaundry;
 		add(p);
 		p.setLayout(null);
 		p.setBackground(Color.white);
@@ -396,7 +403,7 @@ public class JFrameBase extends JFrame implements JFrameInterface{
 			@Override
 			public void actionPerformed(ActionEvent e) {
 				pN3.setVisible(false);
-				jfb.joinFrame();
+
 			}
 		});
 		
