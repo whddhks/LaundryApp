@@ -50,6 +50,8 @@ public class JFrameBase extends JFrame{
 			pN2.setLayout(null);
 			pN2.setBounds(0,0,450,200); // 위치 크기순
 			loginFm.add(pN2);
+			
+			this.setVisible(true);
 		}
 	};
 //	class joinFrame extends JFrame{
@@ -397,13 +399,13 @@ public class JFrameBase extends JFrame{
 		pN.add(b4);
 		
 		JFrameBase jfb=new JFrameBase();
-		
-		
+		pN3.setVisible(false);
+		p.add(joinFm);
 		b1.addActionListener(new ActionListener(){
 			@Override
 			public void actionPerformed(ActionEvent e) {
-				pN3.setVisible(false);
-
+				
+				
 			}
 		});
 		
@@ -431,10 +433,6 @@ public class JFrameBase extends JFrame{
 				
 			}
 		});
-		
-		
-		
-		
 		
 		
 		this.setSize(450,600);
