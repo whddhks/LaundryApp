@@ -20,28 +20,53 @@ public class Test2 extends JFrame{
 	JLabel lb,lb2,lb3,lb4,lb5,lb6,lb7;
 	JButton update,delete, cancel, info ;
 	JButton b5;
-	
+	static JPanel pN2=new JPanel() {
+		Image background=new ImageIcon("cloth.jpeg").getImage();
+		public void paint(Graphics g) {
+			g.drawImage(background, 0, 0, null);
+		}
+	};
+	static JPanel joinFm=new JPanel() { 
+		JTextField tfID=new JTextField();
+		JPasswordField tfPassword=new JPasswordField();
+		JPanel loginFm=new JPanel();
+		JLabel lb,lb2;
+		JButton btn=new JButton();
+		public void joinFrame() {
+			//add(joinFm);
+			loginFm.setLayout(null);
+			loginFm.setBackground(Color.cyan);
+			loginFm.setBounds(0, 200, 435, 295);
+			joinFm.add(loginFm);
+			lb=new JLabel("아 이 디");
+			lb.setBounds(50, 50, 50,20);
+			tfID.setBounds(170,50,180,20);
+			tfID.selectAll();
+			lb2=new JLabel("비 밀 번 호");
+			lb2.setBounds(50, 130, 60, 20);
+			tfPassword.setBounds(170, 130, 180, 20);
+			tfPassword.selectAll();
+			tfPassword.setEchoChar('*');
+			btn= new JButton("로   그   인");
+			btn.setBounds(150,210,120,20);
+			loginFm.add(lb);
+			loginFm.add(lb2);
+			loginFm.add(tfID);
+			loginFm.add(tfPassword);
+			loginFm.add(btn);
+			pN2.setLayout(null);
+			pN2.setBounds(0,0,450,200); // 위치 크기순
+			loginFm.add(pN2);
+		}
+	};
 	public Test2() {
-		//수정,삭제, 취소 , 확인
 		add(p);
 		p.setLayout(null);
-		p.add(pN);
-		pN.setLayout(null);
-		pN.setBackground(Color.orange);
-		pN.setBounds(0, 0, 435, 495);
-		p.add(pN);
-		lb=new JLabel("빨래 방에 오신것을");
-		lb2=new JLabel("환영합니다.!!");
-		
-		
-		lb.setFont(lb.getFont().deriveFont(30f));
-		lb2.setFont(lb2.getFont().deriveFont(30f));
-		
-		lb.setBounds(90,30,420,50);
-		lb2.setBounds(130,80,420,50);
-		pN.add(lb);
-		pN.add(lb2);
-	
+		p.setBackground(Color.cyan);
+		p.add(joinFm);
+		joinFm.setLayout(null);
+		joinFm.setBackground(Color.white);
+		joinFm.setBounds(0, 0, 435, 495);
 		
 		this.setSize(450,600);
 		this.setVisible(true);

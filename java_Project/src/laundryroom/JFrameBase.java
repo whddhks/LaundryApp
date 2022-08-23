@@ -25,8 +25,7 @@ public class JFrameBase extends JFrame{
 			JLabel lb,lb2;
 			JButton btn=new JButton();
 			//add(joinFm);
-			joinFm.setLayout(null);
-			joinFm.setBackground(Color.white);
+			
 			loginFm.setLayout(null);
 			loginFm.setBackground(Color.cyan);
 			loginFm.setBounds(0, 200, 435, 295);
@@ -399,13 +398,20 @@ public class JFrameBase extends JFrame{
 		pN.add(b4);
 		
 		JFrameBase jfb=new JFrameBase();
+		
+		
 		pN3.setVisible(false);
+		
 		p.add(joinFm);
+		joinFm.setLayout(null);
+		joinFm.setBackground(Color.white);
+		joinFm.setBounds(0, 0, 435, 495);
+		
 		b1.addActionListener(new ActionListener(){
 			@Override
 			public void actionPerformed(ActionEvent e) {
 				
-				
+			
 			}
 		});
 		
