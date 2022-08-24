@@ -20,20 +20,22 @@ public class Test2 extends JFrame{
 	JLabel lb,lb2,lb3,lb4,lb5,lb6,lb7;
 	JButton update,delete, cancel, info ;
 	JButton b5;
+	JPanel loginFm=new JPanel();
+	JButton btn=new JButton();
 	static JPanel pN2=new JPanel() {
 		Image background=new ImageIcon("cloth.jpeg").getImage();
 		public void paint(Graphics g) {
 			g.drawImage(background, 0, 0, null);
 		}
 	};
-	static JPanel joinFm=new JPanel() { 
-		JTextField tfID=new JTextField();
-		JPasswordField tfPassword=new JPasswordField();
-		JPanel loginFm=new JPanel();
-		JLabel lb,lb2;
-		JButton btn=new JButton();
+	
+	JPanel joinFm=new JPanel() { 
+		
 		public void joinFrame() {
-			//add(joinFm);
+			add(joinFm);
+			joinFm.setLayout(null);
+			joinFm.setBackground(Color.white);
+			joinFm.setBounds(0, 0, 435, 495);
 			loginFm.setLayout(null);
 			loginFm.setBackground(Color.cyan);
 			loginFm.setBounds(0, 200, 435, 295);
@@ -64,9 +66,7 @@ public class Test2 extends JFrame{
 		p.setLayout(null);
 		p.setBackground(Color.cyan);
 		p.add(joinFm);
-		joinFm.setLayout(null);
-		joinFm.setBackground(Color.white);
-		joinFm.setBounds(0, 0, 435, 495);
+		
 		
 		this.setSize(450,600);
 		this.setVisible(true);
