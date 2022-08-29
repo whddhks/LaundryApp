@@ -4,6 +4,38 @@ import javax.swing.*;
 import java.util.*;
 import java.awt.event.*;
 
+class Joinframe extends JFrame{ 
+	JPanel joinFm=new JPanel();
+	JPanel loginFm=new JPanel();
+	public void Joinframe() {
+		add(joinFm);
+		joinFm.add(loginFm);s
+		loginFm.setLayout(null);
+		loginFm.setBackground(Color.red);
+		loginFm.setBounds(0, 200, 435, 295);
+		joinFm.add(loginFm);
+		lb=new JLabel("아 이 디");
+		lb.setBounds(50, 50, 50,20);
+		tfID.setBounds(170,50,180,20);
+		tfID.selectAll();
+		lb2=new JLabel("비 밀 번 호");
+		lb2.setBounds(50, 130, 60, 20);
+		tfPassword.setBounds(170, 130, 180, 20);
+		tfPassword.selectAll();
+		tfPassword.setEchoChar('*');
+		btn= new JButton("로   그   인");
+		btn.setBounds(150,210,120,20);
+		loginFm.add(lb);
+		loginFm.add(lb2);
+		loginFm.add(tfID);
+		loginFm.add(tfPassword);
+		loginFm.add(btn);
+		pN2.setLayout(null);
+		pN2.setBounds(0,0,450,200); // 위치 크기순
+		loginFm.add(pN2);
+	}
+}
+
 public class Test2 extends JFrame{
 	JPanel p=new JPanel();
 	JPanel pN=new JPanel();
@@ -29,40 +61,16 @@ public class Test2 extends JFrame{
 		}
 	};
 	
-	static JPanel joinFm=new JPanel() { 
-		JPanel loginFm=new JPanel();
+
 		
-		public void joinFrame() {
-//			loginFm.setLayout(null);
-//			loginFm.setBackground(Color.cyan);
-//			loginFm.setBounds(0, 200, 435, 295);
-//			joinFm.add(loginFm);
-//			lb=new JLabel("아 이 디");
-//			lb.setBounds(50, 50, 50,20);
-//			tfID.setBounds(170,50,180,20);
-//			tfID.selectAll();
-//			lb2=new JLabel("비 밀 번 호");
-//			lb2.setBounds(50, 130, 60, 20);
-//			tfPassword.setBounds(170, 130, 180, 20);
-//			tfPassword.selectAll();
-//			tfPassword.setEchoChar('*');
-//			btn= new JButton("로   그   인");
-//			btn.setBounds(150,210,120,20);
-//			loginFm.add(lb);
-//			loginFm.add(lb2);
-//			loginFm.add(tfID);
-//			loginFm.add(tfPassword);
-//			loginFm.add(btn);
-//			pN2.setLayout(null);
-//			pN2.setBounds(0,0,450,200); // 위치 크기순
-//			loginFm.add(pN2);
-		}
-	};
+		
+			
+
 	public Test2() {
 		add(p);
 		p.setLayout(null);
 		p.setBackground(Color.cyan);
-		//p.add(joinFm);
+		p.add(joinFm);
 		joinFm.setLayout(null);
 		joinFm.setBackground(Color.white);
 		joinFm.setBounds(0, 0, 435, 495);
