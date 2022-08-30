@@ -5,11 +5,32 @@ import java.util.*;
 import java.awt.event.*;
 
 class Joinframe extends JFrame{ 
+	JPanel p=new JPanel();
+	JPanel pN=new JPanel();
+	JPanel pN3=new JPanel();
+	
+	JTextArea ta=new JTextArea();
+	JTextField tfID=new JTextField();
+	JTextField tfname=new JTextField();
+	JTextField tfaddr=new JTextField();
+	JTextField tfphone=new JTextField();
+	JTextField tfemail=new JTextField();
+	JTextField tfeaddr=new JTextField();
+	JPasswordField tfPassword=new JPasswordField();
+	JLabel lb,lb2,lb3,lb4,lb5,lb6,lb7;
+	JButton update,delete, cancel, info ;
+	JButton btn;
 	JPanel joinFm=new JPanel();
 	JPanel loginFm=new JPanel();
+	static JPanel pN2=new JPanel() {
+		Image background=new ImageIcon("cloth.jpeg").getImage();
+		public void paint(Graphics g) {
+			g.drawImage(background, 0, 0, null);
+		}
+	};
 	public void Joinframe() {
 		add(joinFm);
-		joinFm.add(loginFm);s
+		joinFm.add(loginFm);
 		loginFm.setLayout(null);
 		loginFm.setBackground(Color.red);
 		loginFm.setBounds(0, 200, 435, 295);
@@ -60,20 +81,11 @@ public class Test2 extends JFrame{
 			g.drawImage(background, 0, 0, null);
 		}
 	};
-	
-
-		
-		
-			
-
 	public Test2() {
 		add(p);
 		p.setLayout(null);
 		p.setBackground(Color.cyan);
-		p.add(joinFm);
-		joinFm.setLayout(null);
-		joinFm.setBackground(Color.white);
-		joinFm.setBounds(0, 0, 435, 495);
+		
 		
 		this.setSize(450,600);
 		this.setVisible(true);
@@ -83,6 +95,7 @@ public class Test2 extends JFrame{
 	
 	public static void main(String[] args) {
 		new Test2();
+		new Joinframe();
 		
 	}
 
