@@ -54,6 +54,7 @@ class Joinframe extends JFrame{
 		pN2.setLayout(null);
 		pN2.setBounds(0,0,450,200); // 위치 크기순
 		loginFm.add(pN2);
+		this.setVisible(true);
 	}
 }
 
@@ -74,19 +75,22 @@ public class Test2 extends JFrame{
 	JButton update,delete, cancel, info ;
 	JButton b5;
 	
-	JButton btn=new JButton();
-	static JPanel pN2=new JPanel() {
-		Image background=new ImageIcon("cloth.jpeg").getImage();
-		public void paint(Graphics g) {
-			g.drawImage(background, 0, 0, null);
-		}
-	};
 	public Test2() {
 		add(p);
 		p.setLayout(null);
 		p.setBackground(Color.cyan);
-		
-		
+		pN.setLayout(null);
+		pN.setBounds(0,0,450,200);
+		pN.setBackground(Color.red);
+		p.add(pN);
+		JButton btn=new JButton("눌러");
+		btn.setBounds(100,400,100,50);
+		p.add(btn);
+		btn.addActionListener(new ActionListener() {
+			public void actionPerformed(ActionEvent e) {
+				
+			}
+		});
 		this.setSize(450,600);
 		this.setVisible(true);
 		this.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
